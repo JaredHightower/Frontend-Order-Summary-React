@@ -1,24 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import { CardContainer, CancelContainer, GridContainer, HeroImg, OrderStyle, Description, AnnualPlan, MusicImage, ChangeLinkStyle, AnnualPlanStyle, PriceStyle, H4Tag, H5Tag, Button } from "./Layout/GridContainer"
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GridContainer>
+        <CardContainer className="App">
+          <HeroImg />
+          <center>
+            <OrderStyle>
+              Order Summary
+            </OrderStyle>
+          </center>
+          <Description>
+            You can now listen to millions of songs, audiobooks, and podcasts on any
+            device anywhere you like!
+          </Description>
+
+          <AnnualPlan>
+            <MusicImage />
+            <AnnualPlanStyle>
+              <H4Tag>Annual Plan</H4Tag>
+              <H5Tag> $59.99/year</H5Tag>
+            </AnnualPlanStyle>
+            <ChangeLinkStyle>
+              Change
+            </ChangeLinkStyle>
+          </AnnualPlan>
+          <Button>
+            Proceed to Payment
+          </Button>
+          <CancelContainer>
+            <center>
+              Cancel Order
+            </center>
+          </CancelContainer>
+        </CardContainer>
+      </GridContainer>
+    </>
   );
 }
 
